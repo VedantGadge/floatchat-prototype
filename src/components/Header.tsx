@@ -1,5 +1,10 @@
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 import { useEffect, useRef, useState } from "react";
+// Import images so Vite bundles and rewrites URLs for production
+import emblemDark from "../assets/emblem-dark.png";
+import swachBharat from "../assets/swach-bharat.png";
+import betiBachao from "../assets/beti-bachao-logo2.png";
+import yogaLogo from "../assets/yoga-logo-days_1.png";
 
 interface HeaderProps {
   currentPage?: string;
@@ -47,7 +52,7 @@ export function Header({ currentPage, onNavigate }: HeaderProps) {
             {/* Government of India Emblem */}
             <div className="flex items-center space-x-3">
               <ImageWithFallback 
-                src="/src/assets/emblem-dark.png" 
+                src={emblemDark}
                 alt="Government of India Emblem"
                 className="h-12 w-auto"
               />
@@ -60,17 +65,17 @@ export function Header({ currentPage, onNavigate }: HeaderProps) {
             {/* Additional Government Scheme Logos */}
             <div className="flex items-center space-x-4 ml-8">
               <ImageWithFallback 
-                src="/src/assets/swach-bharat.png" 
+                src={swachBharat}
                 alt="Swachh Bharat"
                 className="h-8 w-auto"
               />
               <ImageWithFallback 
-                src="/src/assets/beti-bachao-logo2.png" 
+                src={betiBachao}
                 alt="Beti Bachao Beti Padhao"
                 className="h-8 w-auto"
               />
               <ImageWithFallback 
-                src="/src/assets/yoga-logo-days_1.png" 
+                src={yogaLogo}
                 alt="International Day of Yoga"
                 className="h-8 w-auto"
               />
